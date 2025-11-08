@@ -1,0 +1,122 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Negro translúcido */
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #88008d, #f700ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* 🔹 Subrayado animado */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #88008d, #f700ff);
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+.navbar-links li a:hover {
+  color: #f700ff;
+}
+
+/* 🔹 Link especial */
+.contact-link {
+  background: linear-gradient(90deg, #88008d, #f700ff);
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(195, 0, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(247, 0, 255, 0.3);
+  background: linear-gradient(90deg, #88008d, #f700ff);
+}
+
+/* 🔹 Mobile responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+  }
+}
+
+/* Espacio para evitar que el contenido quede bajo el navbar */
+body {
+  padding-top: 80px;
+}

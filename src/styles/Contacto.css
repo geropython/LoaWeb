@@ -1,0 +1,61 @@
+.contacto-section {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #f5f7fa, #d8c3e2);
+    color: #222;
+    max-width: 900px;
+    margin: 60px auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.titulo-h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #222;
+    background: linear-gradient(90deg, #88008d, #f700ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contacto-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.contacto-list li {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.contacto-list li strong {
+    color: #f700ff;
+}
+
+.contacto-highlight {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: #111;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 16px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.contacto-highlight:hover {
+    background: rgba(255, 255, 255, 0.9);
+}

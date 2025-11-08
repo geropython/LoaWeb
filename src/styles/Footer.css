@@ -1,0 +1,77 @@
+.footer {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(10, 20, 40, 0.95));
+  backdrop-filter: blur(6px);
+  color: #fff;
+  padding: 32px 20px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-top: 60px;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, #88008d, #f700ff);
+  opacity: 0.6;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+  position: relative;
+}
+
+.footer-content span {
+  font-size: 0.95rem;
+  color: #ccc;
+  letter-spacing: 0.3px;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(90deg, #88008d, #f700ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* ✨ Efecto de brillo suave en el texto del lema */
+@keyframes glow {
+  0% {
+    opacity: 0.8;
+    text-shadow: 0 0 6px rgba(183, 0, 255, 0.3);
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(183, 0, 255, 0.6);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer {
+    padding: 24px 10px;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .footer-content span {
+    font-size: 0.85rem;
+  }
+}
